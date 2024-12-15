@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.restaurant.Controller.DashboardController">
+   <children>
+      <AnchorPane prefHeight="559.0" prefWidth="845.0">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0">
+               <left>
+                  <AnchorPane prefHeight="561.0" prefWidth="183.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="560.0" prefWidth="183.0" style="-fx-background-color: #4169E1;" styleClass="nav1" stylesheets="@../css/dashboard.css" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="58.0" layoutY="124.0" text="WELCOME">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="95.0" fitWidth="96.0" layoutX="46.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/user-icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Separator layoutX="13.0" layoutY="168.0" prefHeight="11.0" prefWidth="161.0" />
+                              <Button layoutX="21.0" layoutY="211.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="145.0" styleClass="nav-form" stylesheets="@../css/dashboard.css" text="Dashboard">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="available_bt" layoutX="21.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleAvailableButton" prefHeight="42.0" prefWidth="144.0" styleClass="nav-bt" stylesheets="@../css/dashboard.css" text="Available Foods/Drinks">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="order_bt" layoutX="21.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleOrderButton" prefHeight="42.0" prefWidth="143.0" styleClass="nav-bt" stylesheets="@../css/dashboard.css" text="Order">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="signout" layoutX="21.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleSignOut" stylesheets="@../css/dashboard.css" text="SIGN OUT">
+                                 <styleClass>
+                                    <String fx:value="signout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="73.0" layoutY="146.0" text="USER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="545.0" prefWidth="724.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator layoutY="1.0" orientation="VERTICAL" prefHeight="554.0" prefWidth="14.0" />
+                        <AnchorPane fx:id="dashboard_form" layoutX="14.0" layoutY="6.0" prefHeight="539.0" prefWidth="706.0">
+                           <children>
+                              <AnchorPane prefHeight="176.0" prefWidth="708.0" stylesheets="@../css/dashboard.css">
+                                 <children>
+                                    <AnchorPane layoutX="248.0" layoutY="14.0" prefHeight="146.0" prefWidth="214.0" style="-fx-background-color: #4169e1;" styleClass="card" stylesheets="@../css/dashboard.css">
+                                       <children>
+                                          <Label layoutX="58.0" layoutY="110.0" text="Today's Income">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_TI" alignment="CENTER_RIGHT" layoutX="66.0" layoutY="18.0" prefHeight="18.0" prefWidth="133.0" text="\$0.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="4.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Image/money-icon-1024x1024-f6dh1k6o.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="146.0" prefWidth="212.0" style="-fx-background-color: #4169e1;" styleClass="card" stylesheets="@../css/dashboard.css">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="110.0" text="Number of Customers">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_nc" alignment="CENTER_RIGHT" layoutX="64.0" layoutY="18.0" prefHeight="18.0" prefWidth="133.0" text="0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="4.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Image/images-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="482.0" layoutY="13.0" prefHeight="147.0" prefWidth="213.0" style="-fx-background-color: #4169e1;" styleClass="card" stylesheets="@../css/dashboard.css">
+                                       <children>
+                                          <Label layoutX="67.0" layoutY="111.0" text="Total Income">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_INCOME" alignment="CENTER_RIGHT" layoutX="67.0" layoutY="14.0" prefHeight="18.0" prefWidth="133.0" text="\$0.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="78.0" fitWidth="104.0" layoutX="6.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Image/money_dollar-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="nav2" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                              <AnchorPane layoutY="192.0" prefHeight="345.0" prefWidth="708.0" stylesheets="@../css/dashboard.css">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="316.0" prefWidth="306.0" stylesheets="@../css/dashboard.css">
+                                       <children>
+                                          <BarChart fx:id="dashboard_numberchart" prefHeight="308.0" prefWidth="307.0" title="Number of Orders Chart" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis prefWidth="222.0" side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="331.0" layoutY="14.0" prefHeight="316.0" prefWidth="366.0" stylesheets="@../css/dashboard.css">
+                                       <children>
+                                          <Label layoutX="133.0" layoutY="14.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <AreaChart fx:id="dashboard_INchart" layoutY="2.0" prefHeight="310.0" prefWidth="380.0" title="Income Chart">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="nav2" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <top>
+                  <AnchorPane prefHeight="34.0" prefWidth="915.0" stylesheets="@../css/dashboard.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-3.0" prefHeight="36.0" prefWidth="915.0" stylesheets="@../css/dashboard.css">
+                           <styleClass>
+                              <String fx:value="nav1" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="14.0" layoutY="7.0" text="DASHBOARD">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,42 @@
+.textfield{
+    -fx-background-color: transparent;
+    -fx-font-size: 13px;
+    -fx-font-family: Tahoma;
+    -fx-border-color: #ddd;
+    -fx-border-width: .5px;
+}
+
+.textfield:focused{
+    -fx-background-color: #fff;
+    -fx-border-width: 1.2px;
+}
+
+.login{
+    -fx-background-color: linear-gradient(to bottom right, #4d8cea, #1d4f9e);
+    -fx-font-size: 19px;
+    -fx-cursor:hand;
+    -fx-font-family: Arial;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 8px;
+}
+
+.login:hover{
+    -fx-background-color: linear-gradient(to bottom right, #20b743, #11d43b);
+}
+
+.main-form{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px;
+}
+
+.nav1{
+    -fx-background-color: linear-gradient(to bottom right, #4169E1, #075dfc);
+}
+
+.sign-in-title {
+    -fx-font-family: "Arial"; /* Change the font family */
+    -fx-font-size: 39px; /* Set the font size */
+    -fx-font-weight: bold; /* Make it bold */
+    -fx-text-fill: #fff; /* Text color */
+}
